@@ -3,39 +3,58 @@
 	
 	<head>
 		
+		<link rel="stylesheet" href="https://use.typekit.net/jeo4omp.css">
+		<link rel="stylesheet" href="https://use.typekit.net/jeo4omp.css">
+		<link rel="stylesheet" href="https://use.typekit.net/jeo4omp.css">
+		
 		<style>
 			
-			button, body, p {
-				font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+			body, p {
+				font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'
+			}
+			
+			button, h1 {
+				font-family: "westsac";
+				font-weight: 100;
+				font-display: normal;
+			}
+			
+			header img {
+				width:600px;
+				height:250px;
 			}
 			
 			button {
 				background: transparent;
-				padding: 8px;
+				padding: 7px;
 				transition-duration: 0.5s;
 				background-clip: padding-box, border-box;
 				background-origin: border-box;
 				border: 3px solid transparent;
-				border-radius: 20px;
+				border-radius: 18px;
 				border-color: #7555ab;
-				color: white;
-				font-size: 14px;
+				color: gray;
+				font-style: normal;
+				font-size: 20px;
 				cursor: pointer;
-				margin-bottom: 20px;
+				margin:10px 5px;
 			}
 			
 			button:hover {
-				background-color: ;
-				box-shadow: 0 3.5px rgb(0,255,0);
+				color:rgb(0,255,0);
+				box-shadow: 3px 3px 10px rgb(0,255,0);
 			}
 			
 			button:active {
   				background-color: #3e8e41;
-  				transform: translateY(4px);
+  				transform: translateY(3px);
 			}
 			
-			.beetlejuicebanner {
-				opacity: ;
+			main {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 20px;
 			}
 			
 			body {
@@ -54,20 +73,45 @@
 			}
 			
 			wrapper {
-				width: 1000px;
+				width: 800px;
 				padding: 20px;
 				display: block;
 				margin: auto;
 			}
 			
+			.poster {
+				margin-right: 20px;
+			}
+			
 			section {
-				text-align: center;
+				text-align: left;
+				margin-left: 20px;
+			}
+			
+			.media-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-top: 20px;
+				margin-bottom: 100px;
+				position: relative;
+			}
+			
+			.minibeetlejuice {
+				position:absolute;
+				bottom: -115px;
+				right: 30px;
+				width: 300px;
+				height: auto;
+				margin-top: 10px;
 			}
 			
 			footer p {
+				width: 100%;
 				font-size: 11px;
 				text-align: center;
-				padding: 10px;
+				padding: 10px 0;
+				margin-top: 20px;
 			}
 			
 		</style>
@@ -81,45 +125,44 @@
 	
 <body>
 		<header>
-			<img src="Beetlejuice logo.jpg">
+			<img src="Beetlejuice logo2.jpg">
 		</header>
 		
 	<nav>
-		<button class="home">Home</button>
-		<button class="trailer">Trailer</button>
-		<button class="cast">Cast</button>
-		<button class="soundtrack">Soundtrack</button>
-		<button class="about">About</button>
+		<button>HOME</button>
+		<button>TRAILER</button>
+		<button>CAST</button>
+		<a href="https://www.imdb.com/title/tt0094721/soundtrack/?ref_=tt_dyk_snd" target="new"><button>SOUNDTRACK</button></a>
+		<button>ABOUT</button>
 	</nav>
 	
-<img class="beetlejuicebanner" src="Beetlejuice banner.webp">
+<img class="beetlejuicebanner" src="Beetlejuice banner2.webp">
 		
 	<wrapper>
 			<main>
-				<div id="down">
-				<img src="Poster.jpg" class="poster">
-				</div>
+				<img src="Poster2.jpg" class="poster">
 				<section>
-						<h1>About</h1>
+						<h1>ABOUT</h1>
 						<p>
 						Beetlejuice follows a recently deceased couple, Adam and Barbara Maitland, who become ghosts haunting their former home. When a new family, the Deetzes, moves in, the Maitlands try to scare them away but find their efforts largely unsuccessful. Desperate for help, they summon the obnoxious and mischievous spirit Beetlejuice, who offers to assist them but has his own chaotic agenda. As the Maitlands navigate the challenges of their afterlife, they ultimately learn valuable lessons about letting go and acceptance. The film blends dark comedy, fantasy, and supernatural elements, making it a unique and memorable experience.
 						</p>
-						<h2>Details</h2>
+						<h1>DETAILS</h1>
 						<p>Director: Tim Burton</p>
 						<p>Release Date: March 30, 1988</p>
 				</section>
+			</main>
+		
+					<div class="media-container">
 						<video class="trailervideo" width="620" height="410" controls>
 							<source src="Beetlejuice Classic Trailer.mp4" type="video/mp4">
 						</video>
 				<img class="minibeetlejuice" src="Beetlejuice logo copy.png">
-			</main>
-	</wrapper>
+					</div>
 	
 		<footer>
-			<div class="footertext">
 				<p>&copy; Melissa Perez, 2024</p>
 				<p>"This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category."</p>
-			</div>
 		</footer>
+		</wrapper>
 </body>
 </html>
