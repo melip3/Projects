@@ -13,7 +13,7 @@
 				font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif'
 			}
 			
-			button, h1 {
+			button, h1, h3 {
 				font-family: "westsac";
 				font-weight: 100;
 				font-display: normal;
@@ -33,9 +33,9 @@
 				border: 3px solid transparent;
 				border-radius: 18px;
 				border-color: #7555ab;
-				color: gray;
+				color: #d0d0d0;
 				font-style: normal;
-				font-size: 20px;
+				font-size: 18px;
 				cursor: pointer;
 				margin:10px 5px;
 			}
@@ -64,7 +64,7 @@
 				font-size:100%;
 				width:100%;
 				height:100%;
-				color:floralwhite;
+				color:#d0d0d0;
 				font-size:14px;
 				background-color: black;
 				background-attachment: fixed;
@@ -107,11 +107,9 @@
 			}
 			
 			footer p {
-				width: 100%;
 				font-size: 11px;
+				color: #d0d0d0;
 				text-align: center;
-				padding: 10px 0;
-				margin-top: 20px;
 			}
 			
 		</style>
@@ -130,13 +128,13 @@
 		
 	<nav>
 		<button>HOME</button>
-		<button>TRAILER</button>
-		<button>CAST</button>
+		<a href="#trailervideo"><button>TRAILER</button></a>
+		<a href="https://www.imdb.com/title/tt0094721/fullcredits/?ref_=tt_cl_sm" target="new"><button>CAST</button></a>
 		<a href="https://www.imdb.com/title/tt0094721/soundtrack/?ref_=tt_dyk_snd" target="new"><button>SOUNDTRACK</button></a>
-		<button>ABOUT</button>
+		<a href="#about"><button>ABOUT</button></a>
 	</nav>
 	
-<img class="beetlejuicebanner" src="Beetlejuice banner2.webp">
+<img id="about" class="beetlejuicebanner" src="Beetlejuice banner2.webp">
 		
 	<wrapper>
 			<main>
@@ -146,15 +144,15 @@
 						<p>
 						Beetlejuice follows a recently deceased couple, Adam and Barbara Maitland, who become ghosts haunting their former home. When a new family, the Deetzes, moves in, the Maitlands try to scare them away but find their efforts largely unsuccessful. Desperate for help, they summon the obnoxious and mischievous spirit Beetlejuice, who offers to assist them but has his own chaotic agenda. As the Maitlands navigate the challenges of their afterlife, they ultimately learn valuable lessons about letting go and acceptance. The film blends dark comedy, fantasy, and supernatural elements, making it a unique and memorable experience.
 						</p>
-						<h1>DETAILS</h1>
+						<h3>DETAILS</h3>
 						<p>Director: Tim Burton</p>
 						<p>Release Date: March 30, 1988</p>
 				</section>
 			</main>
 		
-					<div class="media-container">
+					<div class="media-container" id="trailervideo">
 						<video class="trailervideo" width="620" height="410" controls>
-							<source src="Beetlejuice Classic Trailer.mp4" type="video/mp4">
+							<source src="BeetlejuiceOfficialTrailer.mp4" type="video/mp4">
 						</video>
 				<img class="minibeetlejuice" src="Beetlejuice logo copy.png">
 					</div>
