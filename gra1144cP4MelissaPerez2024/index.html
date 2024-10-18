@@ -5,57 +5,152 @@
 		
 		<title>Welcome to Radio City Hall Performing Arts Theater | Melissa Perez 2024</title>
 		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<style>
 			
-				body {
+			h2, h3, p {
+				color: white;
+			}
+			
+			body {
 				margin: 0;
 				padding: 0;
-				background-color: #ccc;
+				background-color: #000;
 			}
 	
-				wrapper {
+			.wrapper {
 				width: 1366px;
 				display: block;
 				margin: 0 auto;
-				background-color: #fff;
+				background-image: url("RadioCitybkgrd.jpg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: center;
+				position: relative;
+				z-index: 1;
+			}
+			
+			.wrapper::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				z-index: -1;
+			}
+			
+			header, .content, footer {
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				padding: 20px;
 			}
 			
 			header {
 				padding: 10px 0;
 				width:100%;
+				max-width: 1366px;
+				margin: 0 auto;
+				background-color: black;
 				display: flex;
-				justify-content: space-between;
 				align-items: center;
 			}
 			
-				header ul {
+			header ul {
 				list-style-type:none;
 				padding: 0;
 				margin: 0;
 				display: flex;
-				justify-content: flex-end;
 				align-items: center;
 			}
 			
-				header img {
+			header img {
+				object-fit: contain;
 				width:300px;
 				height:75px;
 				display:block;
-				margin: 0px;
-				align-content: flex-start;
-				
+				margin: 0px;				
 			}
 			
-				header li a {
+			header .nav-container {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+			}
+			
+			header li {
+				margin: 0 10px;
+			}
+			
+			header li:last-child {
+				margin-left: auto;
+			}
+			
+			header li a {
 				padding: 7px;
 				text-decoration: none;
-				text-align: end;
 				background-origin: border-box;
 				border: 3px solid transparent;
 				border-radius: 17px;
 				font-size: 13px;
 				cursor: pointer;
-				margin:0 5px;
+				color: white;
+			}
+			
+			.book-tickets-container {
+				margin-left: auto;
+			}
+			
+			.book-tickets-container a {
+				padding: 7px;
+				text-decoration: none;
+				background-origin: border-box;
+				border: 3px solid transparent;
+				border-radius: 17px;
+				font-size: 13px;
+				cursor: pointer; 
+				color: white; 
+			}
+			
+			.carousel {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				max-height: 400px;
+			}
+			
+			.carousel-images {
+				display: flex;
+				width: calc(100% * 5);
+				transition: transform 1s ease;
+				animation: slide 10s infinite;
+			}
+			
+			.carousel-images img {
+				width: calc(100%-20px);
+				height: auto;
+				object-fit: cover;
+				margin: 0 10px;
+			}
+			
+			@keyframes slide {
+				0%, 20% { transform: translateX(0);}
+				25%, 45% { transform: translateX(-100%);}
+				50%, 70% { transform: translateX(-200%);}
+				75%, 95% { transform: translateX(-300%);}
+				100% { transform: translateX(0);}
+			}
+			
+			.calendar-location-container {
+				background-color: rgba(0, 0, 0, 0.7);
+				padding: 20px;
+				margin: 20px 0;
+				border-radius: 10px;
+				position: relative;
+				z-index: 1;
 			}
 			
 			.map-container {
@@ -64,6 +159,12 @@
 			
 			.map-container h3 {
 				margin-bottom: 10px;
+			}
+			
+			footer {
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				padding: 20px;
 			}
 			
 			
@@ -77,47 +178,67 @@
 			
 			<img src="RadioCityLogo-header.png" alt="Radio City Music Hall Logo">
 			
+		<div class="nav-container">
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="#" target="new">Media</a></li>
 				<li><a href="#" target="new">Location</a></li>
 			</ul>
+		</div>
+			
+		<div class="book-tickets-container">
+			<a href="#" target="new">Book Tickets</a>	
+		</div>
+			
 		</header>
 		
-		<wrapper>
+		<div class="wrapper">
 			
-			<div class="carousel"> 
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background=color: transparent">
-				<ol class="carousel-indicators">
-					
-				</ol>
-				
-			</div>
-				
 			<h3>RADIO CITY MUSIC HALL</h3>
-				
 			<h2>Spectacular Starts Here</h2>
-				
-				<p class="intro">
-					A historic venue of unmatched elegance, there's no place like the Great Stage to see a show.</p>
-				
-	<div class="map-container">
-				<h3>Location</h3>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0931476622454!2d-73.98255212397186!3d40.75997597138652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f8d61b2f3d%3A0x92c4e681d9aada95!2sRadio%20City%20Music%20Hall!5e0!3m2!1sen!2sus!4v1728667213741!5m2!1sen!2sus" 
-				width="600" 
-				height="450" 
-				style="border:0;" allowfullscreen="" 
-				loading="lazy" 
-				referrerpolicy="no-referrer-when-downgrade">
-				</iframe>
-			</div>
 			
-		
-			<footer>
+		<div class="carousel">
+			<div class="carousel-images">
+				<img src="TheRockettesEvent.jpg" alt="Rockettes">
+				<img src="GigglySquadEvent.webp" alt="giggly">
+				<img src="HughJackmanEvent.webp" alt="hughjackman">
+				<img src="LordoftheRingsEvent.webp" alt="lordoftherings">
+				<img src="KevinHartEvent.webp" alt="kevinhart">
+			</div>
+		</div>
+				
+			<p class="intro">
+					A historic venue of unmatched elegance, there's no place like the Great Stage to see a show.</p>
+
+				<div class="calendar-location-container">
+					<div class="calendar-container">
+						<h3>Upcoming Events at Radio City Music Hall</h3>
+						<iframe src="https://calendar.google.com/calendar/embed?src=0a21834c8ef9801180f32ab8f07e9138854150770e45a2b052b2f2d62d173eed%40group.calendar.google.com&ctz=America%2FNew_York" 
+						width="600"
+						height="400"
+						style="border:0"
+						allowfullscreen=""
+						loading="lazy">
+						</iframe>
+					</div>
+
+					<div class="map-container">
+							<h3>Location</h3>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0931476622454!2d-73.98255212397186!3d40.75997597138652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f8d61b2f3d%3A0x92c4e681d9aada95!2sRadio%20City%20Music%20Hall!5e0!3m2!1sen!2sus!4v1728667213741!5m2!1sen!2sus" 
+							width="600" 
+							height="450" 
+							style="border:0;" allowfullscreen="" 
+							loading="lazy" 
+							referrerpolicy="no-referrer-when-downgrade">
+							</iframe>
+						</div>
+					</div>
+														   
+					<footer>
 				<p>&copy; 2024, Melissa Perez. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
 			</footer>
-		</wrapper>
-		
+			
+		</div>
 		
 		
 	</body>
