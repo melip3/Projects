@@ -8,11 +8,10 @@ wrapper {
     width: 1366px;
     margin: auto;
     display: block;
-    background-image: url(greendaypic1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-	background-position: center;
-	background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-color: transparent;
 }
 
@@ -37,13 +36,9 @@ ul a li:hover {
 }
 
 main {
-    height: 650px;
-}
-
-footer {
-    background-color: #000000;
-    color: #FFFFFF;
-    position: 10px 20px;
+	padding: 40px;
+    min-height: 650px;
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 header {
@@ -53,7 +48,7 @@ header {
 	background-color: #FFFFFF;
     margin: 10px;
     padding: 10px;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 header img {
@@ -61,4 +56,14 @@ header img {
     float: left;
     width: 100px;
     height: 150px;
+}
+p  {
+    color: #FFFFFF;
+}
+
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+	text-align: center;
 }
